@@ -2,8 +2,6 @@ import React from 'react'
 
 const Counter = ({ data }) => {
 
-
-
     return (
         <div className="counter">
             <h1>Counter :</h1>

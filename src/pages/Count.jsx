@@ -1,23 +1,32 @@
 import React, { useState } from 'react'
-import PlusButton from '../components/PlusButton'
-import MinusButton from '../components/MinusButton'
+import Button from '../components/Button'
+
 import Counter from '../components/Counter'
 
 const Count = () => {
     // let target = 0
     const [data, setDate] = useState(0)
 
-    const hanldleIncrease = (clickData) => {
-        setDate(data + 1)
+    const countHanldler = (type) => {
+        // data의 최소값: 0
+        // data의 최대값: 10
+        // type === 'plus' ? data < 10 && setDate(data + 1) : data > 0 && setDate(data - 1)
+        // setDate(type === 'plus' ? data + 1 : data - 1)
 
-        console.log('1');
-        console.log(clickData);
+
+        if (type === 'plus') {
+            data < 10 && setDate(data + 1)
+
+        } else {
+            data > 0 && setDate(data - 1)
+        }
+
+
+
         // target += 1
         // document.querySelector('.target').innerText = target
     }
-    const handleDecrease = () => {
-        setDate(data - 1)
-    }
+
 
 
 
@@ -27,8 +36,11 @@ const Count = () => {
 
             <Counter data={data} />
             <div className='button-wrap'>
-                <PlusButton onClick={hanldleIncrease} />
-                <MinusButton onClick={handleDecrease} />
+                {/* 플러스버튼 */}
+                <Button onClick={countHanldler} type={'plus'} />
+                {/* 마이너스 버튼 */}
+                <Button onClick={countHanldler} type={'minus'} />
+
 
                 {/* <div>
                     <div className='target'>Result: {target}</div>
