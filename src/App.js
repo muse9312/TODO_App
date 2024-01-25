@@ -1,10 +1,11 @@
-import './pages.scss'
+import './styles/pages.scss'
+import Count from './pages/Count.jsx'
 
 function App() {
+
   return (
-    <div className="App">
-      <span className="hello">hello</span>
-      world!
+    <div className="wrap">
+      <Count />
     </div>
   );
 }

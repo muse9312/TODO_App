@@ -1,0 +1,37 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 260px 0;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-text {
+    &-plus {
+        font-size: 48px;
+        background-color: red;
+    }
+
+    &-minus {
+        font-size: 36px;
+    }
+}
+
+.counter {
+    font-size: 48px;
+    font-weight: 700;
+    &-text {
+        display: block;
+        text-align: center;
+        font-size: 36px;
+        color: red;
+    }
+}
